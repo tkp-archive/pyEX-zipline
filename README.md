@@ -13,7 +13,4 @@
 
 # Example
 ![](https://raw.githubusercontent.com/timkpaine/pyEX-zipline/master/docs/example.png)
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
 
-[![Beerpay](https://beerpay.io/timkpaine/pyEX-zipline/badge.svg?style=beer-square)](https://beerpay.io/timkpaine/pyEX-zipline)  [![Beerpay](https://beerpay.io/timkpaine/pyEX-zipline/make-wish.svg?style=flat-square)](https://beerpay.io/timkpaine/pyEX-zipline?focus=wish)
