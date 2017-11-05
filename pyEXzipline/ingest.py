@@ -21,5 +21,4 @@ def load_from_iex(symbols, start=None, end=None):
         data[symbol] = _get_data(symbol, start, end)
 
     panel = pd.Panel(data)
-    # panel.major_axis = panel.major_axis.tz_localize(pytz.utc)
     return panel
