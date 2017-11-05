@@ -1,5 +1,4 @@
 import pandas as pd
-import pytz
 from pyEX import chartDF
 
 
