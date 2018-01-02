@@ -3,7 +3,7 @@ from pyEX import chartDF
 
 
 def _get_data(symbol, start, end):
-    df = chartDF('aapl', '5y')
+    df = chartDF(symbol, '5y')
     df = df[['open', 'close', 'high', 'low', 'volume']].set_index(df['date'])
     df.index = pd.to_datetime(df.index)
     if start:
