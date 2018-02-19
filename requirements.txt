@@ -1,4 +1,4 @@
 IPython
 pandas
 pillow
-pyEX>=0.0.2
+pyEX>=0.0.4
