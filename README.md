@@ -7,7 +7,6 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/timkpaine/pyEX-zipline?branch=master)](https://bettercodehub.com/)
 [![License](https://img.shields.io/github/license/timkpaine/pyEX-zipline.svg)](https://pypi.python.org/pypi/pyEX-zipline)
 [![PyPI](https://img.shields.io/pypi/v/pyEX-zipline.svg)](https://pypi.python.org/pypi/pyEX-zipline)
-[![Beerpay](https://beerpay.io/timkpaine/pyEX-zipline/badge.svg?style=flat)](https://beerpay.io/timkpaine/pyEX-zipline)
 
 # Example
 ![](https://raw.githubusercontent.com/timkpaine/pyEX-zipline/master/docs/example.png)
