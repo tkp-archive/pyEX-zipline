@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='pyEX-zipline',
     version='0.0.1',
-    description='Rest API to IEX',
+    description='Integrating zipline with pyEX',
     long_description=long_description,
     url='https://github.com/timkpaine/pyEX-zipline',
     download_url='https://github.com/timkpaine/pyEX-zipline/archive/v0.0.1.tar.gz',
