@@ -12,11 +12,11 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 
 setup(
     name='pyEX-zipline',
-    version='0.0.2',
+    version='0.0.3',
     description='Integrating zipline with pyEX',
     long_description=long_description,
     url='https://github.com/timkpaine/pyEX-zipline',
-    download_url='https://github.com/timkpaine/pyEX-zipline/archive/v0.0.2.tar.gz',
+    download_url='https://github.com/timkpaine/pyEX-zipline/archive/v0.0.3.tar.gz',
     author='Tim Paine',
     author_email='timothy.k.paine@gmail.com',
     license='Apache 2.0',

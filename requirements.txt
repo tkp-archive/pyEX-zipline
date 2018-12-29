@@ -1,5 +1,5 @@
-IPython
-pandas
-pillow
-pyEX==0.0.4
-socketIO-client-nexus
+ipython>=5.8.0
+pandas>=0.22.0
+Pillow>=5.2.0
+pyEX>=0.1.0
+socketIO-client-nexus>=0.7.6
