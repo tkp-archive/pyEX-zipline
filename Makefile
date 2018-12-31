@@ -1,8 +1,8 @@
 tests: ## Clean and Make unit tests
-	python3 -m nose -v tests --with-coverage --cover-erase --cover-package=`find pyEXzipline -name "*.py" | sed "s=\./==g" | sed "s=/=.=g" | sed "s/\.py//g" | tr '\n' ',' | rev | cut -c2- | rev`
+	python3 -m nose2 -v tests --with-coverage --coverage=pyEXzipline
 
-test: ## run the tests for travis CI
-	@ python3 -m nose -v tests --with-coverage --cover-erase --cover-package=`find pyEXzipline -name "*.py" | sed "s=\./==g" | sed "s=/=.=g" | sed "s/\.py//g" | tr '\n' ',' | rev | cut -c2- | rev`
+test: lint ## run the tests for travis CI
+	@ python3 -m nose2 -v tests --with-coverage --coverage=pyEXzipline
 
 lint: ## run linter
 	pylint pyEXzipline || echo
