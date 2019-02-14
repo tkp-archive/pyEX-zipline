@@ -1,8 +1,8 @@
 tests: ## Clean and Make unit tests
-	python3 -m pytest tests --cov=pyEXzipline
+	python3 -m pytest -v tests --cov=pyEXzipline
 
 test: lint ## run the tests for travis CI
-	@ python3 -m pytest tests --cov=pyEXzipline
+	@ python3 -m pytest -v tests --cov=pyEXzipline
 
 lint: ## run linter
 	pylint pyEXzipline || echo
