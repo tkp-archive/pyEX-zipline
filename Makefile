@@ -24,7 +24,7 @@ docs:  ## make documentation
 	make -C ./docs html
 
 install:  ## install to site-packages
-	python3 setup.py install
+	pip3 install .
 
 dist:  ## dist to pypi
 	python3 setup.py sdist upload -r pypi
