@@ -36,6 +36,7 @@ setup(
     keywords='finance data',
     zip_safe=False,
     packages=['pyEX.zipline'],
+    package_dir={'pyEX.zipline': 'pyEX/zipline'},
     install_requires=requires,
     extras_require={'dev': requires + ['pytest', 'pytest-cov', 'pylint', 'flake8']}
 )
