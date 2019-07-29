@@ -1,7 +1,6 @@
 # for Coverage
 from datetime import datetime
 from mock import patch, MagicMock
-import pyEXzipline
 
 
 class TestAll:
@@ -24,7 +23,7 @@ class TestAll:
         # teardown_class() after any methods in this class
 
     def test_all(self):
-        from pyEXzipline import load_from_iex
+        from pyEX.zipline import load_from_iex
         with patch('requests.get') as mock:
             mock.return_value = MagicMock()
             mock.return_value.status_code = 200

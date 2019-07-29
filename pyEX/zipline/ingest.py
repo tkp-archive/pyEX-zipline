@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
+import os
 import pandas as pd
-from pyEX import chartDF
+from pyEX import Client, PyEXception
 
 
-def _get_data(symbol, start, end):
-    df = chartDF(symbol, '5y')
+def _get_data(symbol, start, end, client=None):
+    if client is None and not os.environ.get('IEX_TOKEN'):
+        raise PyEXception('Must provide pyEX client or set IEX_TOKEN environment variable')
+    elif client is None:
+        client = Client()
+
+    df = client.chartDF(symbol, '5y')
     if start:
         df = df[df.index > start]
     if end:
@@ -13,10 +19,11 @@ def _get_data(symbol, start, end):
     return df
 
 
-def load_from_iex(symbols, start=None, end=None):
+def load_from_iex(symbols, start=None, end=None, client=None):
+
     data = {}
     for symbol in symbols:
-        data[symbol] = _get_data(symbol, start, end)
+        data[symbol] = _get_data(symbol, start, end, client)
 
     panel = pd.Panel(data)
     return panel
