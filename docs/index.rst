@@ -16,6 +16,7 @@ pyEX-zipline
 
    installation
    quickstart
+   api
 
 
 .. |build-status| image:: https://travis-ci.org/timkpaine/pyEX-zipline.svg?branch=master

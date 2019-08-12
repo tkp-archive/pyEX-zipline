@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = pyEX-zipline 
+SPHINXPROJ    = pyEX.zipline 
 SOURCEDIR     = .
 BUILDDIR      = _build
 

@@ -1,3 +1,6 @@
+prebuild:  ## Copy assets from pyEX
+	cp -r ../pyEX/pyEX/* ./pyEX/
+
 tests: ## Clean and Make unit tests
 	IEX_TOKEN=Tpk_ecc89ddf30a611e9958142010a80043c python3 -m pytest -v tests --cov=pyEX.zipline
 
@@ -5,26 +8,38 @@ test: lint ## run the tests for travis CI
 	@ IEX_TOKEN=Tpk_ecc89ddf30a611e9958142010a80043c python3 -m pytest -v tests --cov=pyEX.zipline
 
 lint: ## run linter
-	flake8 pyEX.zipline 
+	flake8 pyEX/zipline 
 
 annotate: ## MyPy type annotation check
-	mypy -s pyEX.zipline
+	mypy -s pyEX/zipline
 
 annotate_l: ## MyPy type annotation check - count only
-	mypy -s pyEX.zipline | wc -l 
+	mypy -s pyEX/zipline | wc -l 
 
 clean: ## clean the repository
 	find . -name "__pycache__" | xargs  rm -rf 
 	find . -name "*.pyc" | xargs rm -rf 
 	rm -rf .coverage cover htmlcov logs build dist *.egg-info
-	rm -rf pyEX/*.py
 	make -C ./docs clean
+	rm -rf ./docs/*.*.rst  # generated
+	rm -rf pyEX/*.py
+	rm -rf pyEX/marketdata
 
 docs:  ## make documentation
 	make -C ./docs html
+	open ./docs/_build/html/index.html
 
 install:  ## install to site-packages
 	pip3 install .
+
+micro:  ## steps before dist, defaults to previous tag + one micro
+	. scripts/deploy.sh MICRO
+
+minor:  ## steps before dist, defaults to previous tag + one micro
+	. scripts/deploy.sh MINOR
+
+major:  ## steps before dist, defaults to previous tag + one micro
+	. scripts/deploy.sh MAJOR
 
 dist:  ## dist to pypi
 	rm -rf dist build
