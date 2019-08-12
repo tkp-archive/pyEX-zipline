@@ -16,6 +16,7 @@ setup(
     version='0.0.7',
     description='Rest API to IEX',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/timkpaine/pyEX-zipline',
     download_url='https://github.com/timkpaine/pyEX-zipline/archive/v0.0.7.tar.gz',
     author='Tim Paine',
