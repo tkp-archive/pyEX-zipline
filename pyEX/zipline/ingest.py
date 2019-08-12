@@ -24,6 +24,5 @@ def load_from_iex(symbols, start=None, end=None, client=None):
     data = {}
     for symbol in symbols:
         data[symbol] = _get_data(symbol, start, end, client)
-
-    panel = pd.Panel(data)
-    return panel
+    mi_data = pd.concat(data, axis=1)
+    return mi_data

@@ -103,3 +103,4 @@ ENV/
 pyEX/*.py
 pyEX/marketdata/
 docs/api/
+.autoversion
