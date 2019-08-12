@@ -6,7 +6,7 @@ python:
 
 install:
     - pip install -r requirements.txt
-    - pip install -U pytest pytest-cov flake8 pylint codecov
+    - pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
     - git checkout pyEX/zipline  # the above install clobbers source, so restore
     - pip install -U pytest pytest-cov flake8 pylint codecov
 
