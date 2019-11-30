@@ -7,7 +7,7 @@ From Pip
 
 .. code:: bash
 
-    pip install pyEX-zipline
+    pip install pyEX.zipline
 
 From Source
 ============
