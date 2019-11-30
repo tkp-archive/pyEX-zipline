@@ -5,8 +5,10 @@ test: lint ## run the tests for travis CI
 	@ python3 -m pytest -v tests --cov=pyEXzipline
 
 lint: ## run linter
-	pylint pyEXzipline || echo
 	flake8 pyEXzipline 
+
+fix:  ## run autopep8/tslint fix
+	autopep8 --in-place -r -a -a pyEX/
 
 annotate: ## MyPy type annotation check
 	mypy -s pyEXzipline
