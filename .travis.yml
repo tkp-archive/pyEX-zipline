@@ -1,14 +1,30 @@
+dist: xenial
 language: python
 cache: pip
 
-python:
-  - "3.6"
+matrix:
+  include:
+    - python: "3.7"
+      env: PYTHONVER=3
+
+addons:
+  apt:
+    update: true
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - graphviz
+  homebrew:
+    update: true
+    packages:
+      - python
+      - graphviz
+      - python2
 
 install:
-    - pip install -r requirements.txt
-    - pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
+    - python3 -m pip install -r requirements.txt && python3 -m pip install -e .[dev]
+    - python3 -m pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
     - git checkout pyEX/zipline  # the above install clobbers source, so restore
-    - pip install -U pytest pytest-cov flake8 pylint codecov
 
 script: make test
 
