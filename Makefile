@@ -32,15 +32,6 @@ docs:  ## make documentation
 install:  ## install to site-packages
 	pip3 install .
 
-micro:  ## steps before dist, defaults to previous tag + one micro
-	. scripts/deploy.sh MICRO
-
-minor:  ## steps before dist, defaults to previous tag + one micro
-	. scripts/deploy.sh MINOR
-
-major:  ## steps before dist, defaults to previous tag + one micro
-	. scripts/deploy.sh MAJOR
-
 dist:  ## dist to pypi
 	rm -rf dist build
 	python3 setup.py sdist
