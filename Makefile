@@ -2,10 +2,10 @@ prebuild:  ## Copy assets from pyEX
 	cp -r ../pyEX/pyEX/* ./pyEX/
 
 tests: ## Clean and Make unit tests
-	IEX_TOKEN=Tpk_ecc89ddf30a611e9958142010a80043c python3 -m pytest -v tests --cov=pyEX.zipline
+	IEX_TOKEN=Tpk_ecc89ddf30a611e9958142010a80043c python3 -m pytest -v pyEX/zipline/tests --cov=pyEX
 
 test: lint ## run the tests for travis CI
-	@ IEX_TOKEN=Tpk_ecc89ddf30a611e9958142010a80043c python3 -m pytest -v tests --cov=pyEX.zipline
+	@ IEX_TOKEN=Tpk_ecc89ddf30a611e9958142010a80043c python3 -m pytest -v pyEX/zipline/tests --cov=pyEX
 
 lint: ## run linter
 	flake8 pyEX/zipline 
