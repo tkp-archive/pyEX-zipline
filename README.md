@@ -11,3 +11,6 @@
 # Example
 ![](https://raw.githubusercontent.com/timkpaine/pyEX-zipline/master/docs/example.png)
 
+
+## Installation
+`pip install pyEX.zipline`
