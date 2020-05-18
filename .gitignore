@@ -103,4 +103,6 @@ ENV/
 pyEX/*.py
 pyEX/marketdata/
 docs/api/
+docs/index.md
 .autoversion
+
